@@ -1,8 +1,8 @@
 const config = {
-    user: 'sa',
-    password: '1234',
-    database: 'Testing',
-    server: 'localhost',
+    user:process.env.user,
+    password: process.env.password,
+    database: process.env.database,
+    server: process.env.server,
     pool: {
         max: 10,
         min: 0,
