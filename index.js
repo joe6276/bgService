@@ -1,8 +1,7 @@
-const config = require('./config/db')
+require('dotenv').config()
 const express= require('express')
 const mssql= require('mssql')
 const app= express();
-const user=require('./user')
 const regTask  = require('./emailService/registration')
 
 const cron = require('node-cron');
@@ -18,11 +17,11 @@ run()
 
 
 
-mssql.connect(config).then(pool=>{
-  if(pool.connecting){
-    console.log("Connecting to the Database")
-  }  
-})
+// mssql.connect(config).then(pool=>{
+//   if(pool.connecting){
+//     console.log("Connecting to the Database")
+//   }  
+// })
 
 
 
