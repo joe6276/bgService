@@ -5,10 +5,10 @@ async function getUsers(){
     try {
         let pool= await sql.connect(db)
         let user= await pool.request().query('select * FROM Tasks')
-        return user.recordsets
+        return user.recordset
 
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
         
     }
 }
